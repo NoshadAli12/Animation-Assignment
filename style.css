@@ -1,0 +1,42 @@
+body {
+font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+background: powderblue;
+}
+
+.animated-text {
+font-size: 2em;
+font-weight: bold;
+color: #333;
+}
+
+.animated-text span {
+display: inline-block;
+animation: changeText 4s infinite;
+}
+
+@keyframes changeText {
+0%, 25% {
+  content: "Everyone!]";
+}
+25%, 50% {
+  content: "User!]";
+}
+50%, 75% {
+  content: "Bob!]";
+}
+75%, 100% {
+  content: "World!]";
+}
+}
+
+
+.animated-text::after {
+content: "Everyone";
+display: inline-block;
+animation: changeText 6s infinite;
+}
